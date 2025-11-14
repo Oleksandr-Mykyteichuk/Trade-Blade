@@ -1,0 +1,27 @@
+.phone {
+    display: flex;
+    background-color: var(--bg-dark);
+    justify-content: space-between;
+    align-items: center;
+    height: 52px;
+    z-index: 1;
+    
+    @media screen and (min-width: 801px) {
+        display: none;
+    }
+}
+
+.logo {
+    height: 52px;
+    margin: 0 10px;
+}
+
+.burger {
+    background-color: var(--bg-dark);
+    background-image: var('Trade-Blade/src/assets/burger.svg');
+    width: 32px;
+    height: 32px;
+    border: none;
+    margin: 9px 8px 11px 0;
+    display: flex;
+}

@@ -1,0 +1,29 @@
+:root {
+    --text-color-vite: #FFF;
+    --text-color-purple: #6A54FF;
+    --text-color-blak: #000;
+    --text-color-dark: #030718;
+    --text-color-q: #57E1FF;
+    --text-color-green: #35FF9E;
+    --text-color-grey: #A5AEBC;
+
+    --bg-dark: #030718;
+    --bg-purple: #6A54FF;
+    --bg-vite: #FFF;
+    --bg-q: #57E1FF;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+  font-family: "IBM Plex Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+  background: var(--bg-dark);
+  color: var(--text-color-vite);
+}
