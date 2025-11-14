@@ -140,7 +140,7 @@ export const Traids: React.FC = () => {
   }, []);
 
   return (
-    <section className="traids">
+    <section id='online-deals' className="traids">
       <h2 className="traids__title">Минулі угоди</h2>
 
       <p className="traids__status">

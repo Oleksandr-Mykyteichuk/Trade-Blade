@@ -2,7 +2,7 @@
 export function About() {
     return (
         <>
-            <section className="about">
+            <section id="about" className="about">
                 <h2 className="about-title">про компанію</h2>
                 <p className="about-text">
                     Ми — досвідчена команда, для якої трейдинг — це професія. TradeBlade є авторизованим офіційним брокером біржі Binance.

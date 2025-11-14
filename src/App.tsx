@@ -10,8 +10,8 @@ import { Tradeblade } from "./components/Tradeblade";
 import { HowStart } from "./components/HowStart";
 import { Tariffs } from "./components/Tariffs/Tariffs";
 import { Comments } from "./components/Comments";
-import { Quastion } from "./components/Quastion";
-import { Footer } from "./components/Footer";
+import { Faq } from "./components/Faq/Faq";
+import { Footer } from "./components/Footer/Footer";
 import { HeaderPhone } from "./components/HeaderPhone/HeaderPhone";
 import { useState } from "react";
 
@@ -36,7 +36,7 @@ function App() {
     <HowStart />
     <Tariffs />
     <Comments />
-    <Quastion />
+    <Faq />
     <Start />
     <Footer />
     </>

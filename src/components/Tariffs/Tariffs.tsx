@@ -59,16 +59,15 @@ const futuresTariffs: Tariff[] = [
   },
 ];
 
-export function Tariffs () {
+export function Tariffs() {
   const [mode, setMode] = useState<'spot' | 'futures'>('spot');
 
   const tariffs = mode === 'spot' ? spotTariffs : futuresTariffs;
 
   return (
-    <section className="tariffs">
+    <section id='tariffs' className="tariffs">
       <h2 className="tariffs__title">ТАРИФИ</h2>
 
-      {/* Перемикач СПОТ / ФʼЮЧЕРС */}
       <div className="tariffs__switch">
         <div className="tariffs__switch-track">
           <div
@@ -100,7 +99,6 @@ export function Tariffs () {
         </div>
       </div>
 
-      {/* Картки тарифів */}
       <div className="tariffs__cards">
         {tariffs.map((tariff, index) => (
           <article

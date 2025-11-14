@@ -1,16 +1,14 @@
 .tariffs {
-  background-color: var(--bg-dark); // твій темний фон
+  background-color: var(--bg-dark); 
   padding: 80px 40px;
 }
 
 .tariffs__title {
   margin: 0 0 24px;
-  color: #ffffff;
+  color: var(--bg-vite);
   font-size: 32px;
   font-weight: 700;
 }
-
-/* Перемикач */
 
 .tariffs__switch {
   margin-bottom: 40px;
@@ -32,7 +30,7 @@
   width: calc(50% - 4px);
   height: calc(100% - 8px);
   border-radius: 4px;
-  background: #40ddff;
+  background: var(--bg-q);
   transition: transform 0.25s ease;
   z-index: 1;
 }
@@ -51,14 +49,12 @@
   font-size: 16px;
   font-weight: 600;
   cursor: pointer;
-  color: #70cfff;
+  color: var(--text-color-q);
 }
 
 .tariffs__switch-btn--active {
-  color: #000000;
+  color: var(--text-color-blak);
 }
-
-/* Картки */
 
 .tariffs__cards {
   display: flex;
@@ -70,17 +66,17 @@
 .tariffs__card {
   flex: 1 1 300px;
   max-width: 420px;
-  background: #050816;
+  background: var(--bg-dark);
   border-radius: 8px;
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  border: 1px solid var(--bg-grey);
   padding: 24px 24px 28px;
   display: flex;
   flex-direction: column;
-  color: #ffffff;
+  color: var(--text-color-vite);
 }
 
 .tariffs__card--highlight {
-  background: #6b5cff;
+  background: var(--bg-purple);
   border-color: transparent;
 }
 
@@ -91,14 +87,12 @@
   letter-spacing: 0.08em;
 }
 
-/* список фіч */
-
 .tariffs__features {
   list-style: none;
   margin: 0 0 24px;
   padding: 16px 0 20px;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  border-top: 1px solid var(--bg-grey);
+  border-bottom: 1px solid var(--bg-grey);
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -119,8 +113,6 @@
 .tariffs__feature-text {
   opacity: 0.9;
 }
-
-/* Низ картки */
 
 .tariffs__bottom {
   margin-top: auto;
@@ -143,19 +135,17 @@
 
 .tariffs__discount {
   font-size: 14px;
-  color: #48ff7b;
+  color: var(--text-color-green);
 }
 
 .tariffs__period {
   padding: 8px 12px;
   border-radius: 6px;
   border: none;
-  background: rgba(0, 0, 0, 0.2);
-  color: #ffffff;
+  background: var(--bg-dark);
+  color: var(--text-color-vite);
   font-size: 14px;
 }
-
-/* Кнопка */
 
 .tariffs__cta {
   margin-top: 20px;
@@ -163,8 +153,8 @@
   padding: 12px 16px;
   border-radius: 10px;
   border: none;
-  background: #40ddff;
-  color: #000000;
+  background: var(--bg-q);
+  color: var(--text-color-blak);
   font-weight: 700;
   font-size: 14px;
   cursor: pointer;
@@ -178,8 +168,6 @@
   font-size: 12px;
   font-weight: 400;
 }
-
-/* Адаптив */
 
 @media (max-width: 768px) {
   .tariffs {

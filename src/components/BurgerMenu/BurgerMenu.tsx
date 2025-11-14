@@ -3,6 +3,11 @@ interface BurgerMenuProps {
 }
 
 export function BurgerMenu({ onClose }: BurgerMenuProps) {
+    const handleClick = (id: string) => (e: React.MouseEvent) => {
+        e.preventDefault();
+        document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
+        onClose();
+    };
     return (
         <>
             <div className="body">
@@ -12,13 +17,13 @@ export function BurgerMenu({ onClose }: BurgerMenuProps) {
                     </button>
                 </div>
                 <nav className="navigation-burger">
-                    <a className="link-burger" href="#">Цифри</a>
-                    <a className="link-burger" href="#">Угоди онлайн</a>
-                    <a className="link-burger" href="#">Про компанію</a>
-                    <a className="link-burger" href="#">Як почати</a>
-                    <a className="link-burger" href="#">Тарифи</a>
-                    <a className="link-burger" href="#">Відгуки</a>
-                    <a className="link-burger" href="#">FAQ</a>
+                    <a className="link-burger" href="#numbers" onClick={handleClick('numbers')}>ЦИФРИ</a>
+                    <a className="link-burger" href="#online-deals" onClick={handleClick('online-deals')}>УГОДИ ОНЛАЙН</a>
+                    <a className="link-burger" href="#about" onClick={handleClick('about')}>ПРО КОМПАНІЮ</a>
+                    <a className="link-burger" href="#tradeblade" onClick={handleClick('tradeblade')}>TRADEBLADE ЦЕ</a>
+                    <a className="link-burger" href="#how-start" onClick={handleClick('how-start')}>ЯК ПОЧАТИ</a>
+                    <a className="link-burger" href="#tariffs" onClick={handleClick('tariffs')}>ТАРИФИ</a>
+                    <a className="link-burger" href="#faq" onClick={handleClick('faq')}>FAQ</a>
                 </nav>
                 <div className="button-burger">
                     <button className="in-burger">ВХІД</button>

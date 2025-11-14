@@ -7,8 +7,8 @@
     --text-color-green: #35FF9E;
     --text-color-grey: #A5AEBC;
     --text-color-witegrey: #E7F7F8;
-;
 
+    --bg-blak: #000;
     --bg-dark: #030718;
     --bg-purple: #6A54FF;
     --bg-vite: #FFF;
@@ -31,4 +31,5 @@ html {
   font-variation-settings: "wdth" 100;
   background: var(--bg-dark);
   color: var(--text-color-vite);
+  scroll-behavior: smooth;
 }

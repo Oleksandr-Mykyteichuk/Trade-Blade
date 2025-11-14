@@ -1,7 +1,7 @@
 export function Numbers() {
     return (
         <>
-            <div className="numbers">
+            <section id="numbers" className="numbers">
                 <div>
                     <h3 className="numbers-title">
                         ЦИФРИ
@@ -22,7 +22,7 @@ export function Numbers() {
                         <h3 className="numbers-number">375000</h3>
                     </div>
                 </div>
-            </div>
+            </section>
         </>
     );
 }
