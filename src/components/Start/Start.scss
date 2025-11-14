@@ -1,0 +1,35 @@
+.start {
+    background-color: var(--bg-purple);
+    display: flex;
+    flex-direction: column;
+    padding: 16px;
+}
+
+.start-text {
+    font-weight: 500;
+    font-size: 20px;
+    color: var(--text-color-vite);
+    text-align: center;
+}
+
+.start-email {
+    background-color: var(--bg-email);
+    color: var(--text-color-witegrey);
+    height: 50px;
+    font-weight: 500;
+    font-size: 14px;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 4px;
+    padding-left: 15px;
+}
+
+.start-button {
+    height: 52px;
+    background-color: var(--bg-q);
+    color: var(--text-color-dark);
+    border: none;
+    border-radius: 4px;
+    margin: 8px 0;
+    text-transform: uppercase;
+}

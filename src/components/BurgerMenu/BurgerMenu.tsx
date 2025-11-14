@@ -1,5 +1,3 @@
-import './BurgerMenu.scss'
-
 interface BurgerMenuProps {
     onClose: () => void;
 }

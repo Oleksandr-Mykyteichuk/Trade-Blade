@@ -1,0 +1,127 @@
+.title {
+margin: 40px 16px 0;
+}
+
+.wrapper {
+    position: relative;
+    width: 300px;
+    height: 134px;
+    margin-bottom: 33px;
+}
+
+.card {
+    width: 176px;
+    height: 104px;
+    position: absolute;
+    border-radius: 4px;
+}
+
+.cardGhost {
+    border: 1px dashed rgba(155, 173, 255, 0.4);
+    background: transparent;
+    color: var(--text-color-purple);
+    margin: 0 124px 30px 0;
+
+    &::before {
+        content: '';
+        position: absolute;
+        left: 85px;
+        top: 115px;
+        width: 32px;
+        height: 20px;
+        border-top: 1px solid rgba(155, 173, 255, 0.6);
+        transform: rotate(45deg);
+    }
+}
+
+.cardMain {
+    margin: 30px 0 0 124px;
+    background: #6b5cff;
+    color: #ffffff;
+    z-index: 2;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.5);
+
+    &::before {
+        content: '';
+        position: absolute;
+        left: 45px;
+        top: -20px;
+        width: 32px;
+        height: 20px;
+        border-top: 1px solid rgba(155, 173, 255, 0.6);
+        transform: rotate(45deg);
+    }
+}
+
+.info {
+    margin: 6px 10px;
+}
+
+.pair {
+    font-size: 14px;
+    font-weight: 500;
+    font-size: 20px;
+    margin: 0;
+}
+
+.type {
+    font-size: 12px;
+    opacity: 0.7;
+    margin: 0;
+}
+
+.percent {
+    font-size: 20px;
+    font-weight: 500;
+    margin: 20px 0 0 0;
+}
+
+.title-text {
+    font-weight: 700;
+    font-size: 35px;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+.text {
+    font-weight: 400;
+    font-size: 16px;
+    color: var(--text-color-witegrey);
+    margin-top: 12px;
+}
+
+.input-blok {
+    position: relative;
+    max-width: 500px;
+}
+
+.input-email {
+    background-color: var(--bg-email);
+    width: 100%;
+    height: 50px;
+    border-radius: 4px;
+    color: var(--text-color-witegrey);
+    font-weight: 500;
+    font-size: 14px;
+    text-transform: uppercase;
+    border: none;
+}
+
+.button-start {
+    position: absolute;
+    background-color: var(--bg-q);
+    color: var(--text-color-dark);
+    border-radius: 3px;
+    border: 1px solid var(--bg-q);
+    width: 102px;
+    height: 42px;
+    right: 0;
+    top: 5px;
+}
+
+.bottom-text {
+    color: var(--text-color-grey);
+    font-weight: 400;
+    font-size: 14px;
+    margin-bottom: 37px;
+}

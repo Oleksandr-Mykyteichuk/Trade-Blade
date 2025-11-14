@@ -1,0 +1,196 @@
+.tariffs {
+  background-color: var(--bg-dark); // твій темний фон
+  padding: 80px 40px;
+}
+
+.tariffs__title {
+  margin: 0 0 24px;
+  color: #ffffff;
+  font-size: 32px;
+  font-weight: 700;
+}
+
+/* Перемикач */
+
+.tariffs__switch {
+  margin-bottom: 40px;
+}
+
+.tariffs__switch-track {
+  position: relative;
+  display: inline-flex;
+  background: #25256b;
+  border-radius: 4px;
+  padding: 4px;
+  overflow: hidden;
+}
+
+.tariffs__switch-thumb {
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  width: calc(50% - 4px);
+  height: calc(100% - 8px);
+  border-radius: 4px;
+  background: #40ddff;
+  transition: transform 0.25s ease;
+  z-index: 1;
+}
+
+.tariffs__switch-thumb--right {
+  transform: translateX(100%);
+}
+
+.tariffs__switch-btn {
+  position: relative;
+  z-index: 2;
+  flex: 1;
+  border: none;
+  background: transparent;
+  padding: 10px 32px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  color: #70cfff;
+}
+
+.tariffs__switch-btn--active {
+  color: #000000;
+}
+
+/* Картки */
+
+.tariffs__cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  margin-top: 32px;
+}
+
+.tariffs__card {
+  flex: 1 1 300px;
+  max-width: 420px;
+  background: #050816;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 24px 24px 28px;
+  display: flex;
+  flex-direction: column;
+  color: #ffffff;
+}
+
+.tariffs__card--highlight {
+  background: #6b5cff;
+  border-color: transparent;
+}
+
+.tariffs__card-title {
+  margin: 0 0 16px;
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+
+/* список фіч */
+
+.tariffs__features {
+  list-style: none;
+  margin: 0 0 24px;
+  padding: 16px 0 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.tariffs__feature {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  font-size: 14px;
+}
+
+.tariffs__feature-icon {
+  font-size: 14px;
+  margin-top: 2px;
+}
+
+.tariffs__feature-text {
+  opacity: 0.9;
+}
+
+/* Низ картки */
+
+.tariffs__bottom {
+  margin-top: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+}
+
+.tariffs__price-block {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+}
+
+.tariffs__price {
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.tariffs__discount {
+  font-size: 14px;
+  color: #48ff7b;
+}
+
+.tariffs__period {
+  padding: 8px 12px;
+  border-radius: 6px;
+  border: none;
+  background: rgba(0, 0, 0, 0.2);
+  color: #ffffff;
+  font-size: 14px;
+}
+
+/* Кнопка */
+
+.tariffs__cta {
+  margin-top: 20px;
+  width: 100%;
+  padding: 12px 16px;
+  border-radius: 10px;
+  border: none;
+  background: #40ddff;
+  color: #000000;
+  font-weight: 700;
+  font-size: 14px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.tariffs__cta-sub {
+  margin-top: 4px;
+  font-size: 12px;
+  font-weight: 400;
+}
+
+/* Адаптив */
+
+@media (max-width: 768px) {
+  .tariffs {
+    padding: 60px 16px;
+  }
+
+  .tariffs__cards {
+    flex-direction: column;
+  }
+
+  .tariffs__card {
+    max-width: 100%;
+  }
+}
