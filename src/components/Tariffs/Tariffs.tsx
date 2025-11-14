@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import './tariffs.scss';
 
 type Tariff = {
   name: string;
