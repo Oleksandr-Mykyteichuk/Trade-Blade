@@ -2,6 +2,7 @@
     background-color: var(--bg-vite);
     padding: 24px 16px 68px;
     position: relative;
+    height: 300px;
 
     &::after {
         content: "";
@@ -15,12 +16,23 @@
         transform: skewX(20deg);
     }
 
-    @media screen and (min-width: 1150px) {
+
+    @media screen and (min-width: 1101px) {
         padding: 40px 30px 55px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
     }
+
     @media screen and (min-width: 1250px) {
         padding: 56px 80px 92px;
     }
+}
+
+.about-top {
+    display: flex;
+    flex-direction: column;
+    max-width: 420px;
 }
 
 .about-title {
@@ -34,4 +46,9 @@
     color: var(--text-color-dark);
     font-weight: 400;
     font-size: 16px;
+}
+
+.about-start {
+    display: flex;
+    justify-content: center;
 }

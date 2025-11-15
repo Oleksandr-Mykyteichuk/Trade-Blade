@@ -1,7 +1,10 @@
+import { Start } from "../Start/Start";
+
 export function About() {
     return (
         <>
             <section id="about" className="about">
+                <div className="about-top">
                 <h2 className="about-title">про компанію</h2>
                 <p className="about-text">
                     Ми — досвідчена команда, для якої трейдинг — це професія. TradeBlade є авторизованим офіційним брокером біржі Binance.
@@ -9,6 +12,10 @@ export function About() {
                 <p className="about-text">
                     Він надає користувачам багато переваг, як-от вища швидкість синхронізації API та можливість створити обліковий запис Binance через платформу TradeBlade лише в 1 клік.
                 </p>
+                </div>
+                <div className="about-start">
+                    <Start />
+                </div>
 
             </section>
         </>

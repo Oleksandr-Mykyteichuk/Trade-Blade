@@ -5,7 +5,6 @@ import { BurgerMenu } from "./components/BurgerMenu/BurgerMenu";
 import { Numbers } from "./components/Numbers/Numbers";
 import { Traids } from "./components/Traids/Traids";
 import { About } from "./components/About/About";
-import { Start } from "./components/Start/Start";
 import { Tariffs } from "./components/Tariffs/Tariffs";
 import { Faq } from "./components/Faq/Faq";
 import { Footer } from "./components/Footer/Footer";
@@ -28,10 +27,8 @@ function App() {
     <Numbers />
     <Traids />
     <About />
-    <Start />
     <Tariffs />
     <Faq />
-    <Start />
     <Footer />
     </>
   )

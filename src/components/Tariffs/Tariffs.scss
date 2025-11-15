@@ -4,6 +4,7 @@
   display: flex;
   align-items: center;
   flex-direction: column;
+  margin-top: 150px;
 }
 
 .tarif-top {
@@ -68,7 +69,6 @@
 
 .tariffs__cards {
   display: flex;
-  flex-wrap: wrap;
   gap: 24px;
   margin-top: 32px;
 }
