@@ -119,9 +119,9 @@ export const Traids: React.FC = () => {
         return;
       }
 
-      const visibleRatio = clientWidth / scrollWidth; // яка частина контенту зараз у вікні
+      const visibleRatio = clientWidth / scrollWidth;
       const thumbWidth = trackWidth * visibleRatio;
-      const progress = scrollLeft / maxScroll;        // 0..1
+      const progress = scrollLeft / maxScroll;
       const maxShift = trackWidth - thumbWidth;
 
       thumb.style.width = `${thumbWidth}px`;

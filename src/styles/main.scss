@@ -1,26 +1,26 @@
 :root {
-    --text-color-vite: #FFF;
-    --text-color-purple: #6A54FF;
-    --text-color-blak: #000;
-    --text-color-dark: #030718;
-    --text-color-q: #57E1FF;
-    --text-color-green: #35FF9E;
-    --text-color-grey: #A5AEBC;
-    --text-color-witegrey: #E7F7F8;
+  --text-color-vite: #FFF;
+  --text-color-purple: #6A54FF;
+  --text-color-blak: #000;
+  --text-color-dark: #030718;
+  --text-color-q: #57E1FF;
+  --text-color-green: #35FF9E;
+  --text-color-grey: #A5AEBC;
+  --text-color-witegrey: #E7F7F8;
 
-    --bg-blak: #000;
-    --bg-dark: #030718;
-    --bg-purple: #6A54FF;
-    --bg-vite: #FFF;
-    --bg-q: #57E1FF;
-    --bg-email: #201A4F;
-    --bg-grey: #434F70;
-    --bg-green: #35FF9E;
+  --bg-blak: #000;
+  --bg-dark: #030718;
+  --bg-purple: #6A54FF;
+  --bg-vite: #FFF;
+  --bg-q: #57E1FF;
+  --bg-email: #201A4F;
+  --bg-grey: #434F70;
+  --bg-green: #35FF9E;
 }
 
 body {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 html {
@@ -32,4 +32,67 @@ html {
   background: var(--bg-dark);
   color: var(--text-color-vite);
   scroll-behavior: smooth;
+
+  padding: 0 16px;
+  @media (min-width: 800px) {
+    padding: 0 25px;
+  }
+  @media (min-width: 1101px) {
+    padding: 0 40px;
+  }
+  @media (min-width: 1200px) {
+    padding: 0 80px;
+  }
+}
+
+section {
+  margin: 0 -16px;
+  padding: 0 16px;
+
+  @media (min-width: 800px) {
+    margin: 0 -25px;
+    padding: 0 25px;
+  }
+  @media (min-width: 1101px) {
+    margin: 0 -40px;
+    padding: 0 40px;
+  }
+  @media (min-width: 1200px) {
+    margin: 0 -80px;
+    padding: 0 80px;
+  }
+}
+header {
+  margin: 0 -16px;
+  padding: 0 16px;
+
+  @media (min-width: 800px) {
+    margin: 0 -25px;
+    padding: 0 25px;
+  }
+  @media (min-width: 1101px) {
+    margin: 0 -40px;
+    padding: 0 40px;
+  }
+  @media (min-width: 1200px) {
+    margin: 0 -80px;
+    padding: 0 80px;
+  }
+}
+footer {
+  margin: 0 -16px;
+  padding: 0 16px;
+
+  @media (min-width: 800px) {
+    margin: 0 -25px;
+    padding: 0 25px;
+  }
+  @media (min-width: 1101px) {
+    margin: 0 -40px;
+    padding: 0 40px;
+  }
+  @media (min-width: 1200px) {
+    margin: 0 -80px;
+    padding: 0 80px;
+  }
 }

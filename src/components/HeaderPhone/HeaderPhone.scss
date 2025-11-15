@@ -6,14 +6,13 @@
     height: 52px;
     z-index: 1;
     
-    @media screen and (min-width: 801px) {
+    @media screen and (min-width: 1101px) {
         display: none;
     }
 }
 
 .logo {
     height: 52px;
-    margin: 0 10px;
 }
 
 .burger {
@@ -22,6 +21,6 @@
     width: 32px;
     height: 32px;
     border: none;
-    margin: 9px 8px 11px 0;
+    margin: 9px 0 11px 0;
     display: flex;
 }

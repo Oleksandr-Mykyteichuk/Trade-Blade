@@ -1,8 +1,8 @@
 export function Title() {
     return (
         <>
-            <div className="title">
-                <div className='wrapper'>
+            <section className="title">
+                <div className='title-wrapper'>
                     <div className='card cardGhost'>
                         <div className="info">
                             <h3 className='pair'>ETH/USDT</h3>
@@ -19,20 +19,21 @@ export function Title() {
                         </div>
                     </div>
                 </div>
-                <div>
+                <div className="ttitle-top">
                     <h3 className="title-text">
                         Миттєво копіюй угоди професійних трейдерів
                     </h3>
                     <p className="text">
                         Почни копіювати угоди разом з успішною командою професійних трейдерів в автоматичному режимі.
                     </p>
+
+                    <div className="input-blok">
+                        <input className="input-email" type="email" placeholder="ВАШ E-MAIL" />
+                        <button className="button-start">почати</button>
+                        <p className="bottom-text">5 днів безкоштовно</p>
+                    </div>
                 </div>
-                <div className="input-blok">
-                    <input className="input-email" type="email" placeholder="ВАШ E-MAIL"/>
-                    <button className="button-start">почати</button>
-                </div>
-                <p className="bottom-text">5 днів безкоштовно</p>
-            </div>
+            </section>
         </>
     );
 }

@@ -1,7 +1,7 @@
 export function Header() {
     return (
         <>
-            <div className="header">
+            <header className="header">
                 <a href="/">
                 <img className="header-logo" src=".\src\assets\logo.svg" alt="logo" />
                 </a>
@@ -19,7 +19,7 @@ export function Header() {
                     <button className="header-in">ВХІД</button>
                     <button className="header-up">РЕЄСТРАЦІЯ</button>
                 </div>
-            </div>
+            </header>
         </>
     );
 }

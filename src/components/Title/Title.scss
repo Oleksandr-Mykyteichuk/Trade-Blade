@@ -1,8 +1,8 @@
 .title {
-margin: 40px 16px 0;
+    margin: 40px 0 86px;
 }
 
-.wrapper {
+.title-wrapper {
     position: relative;
     width: 300px;
     height: 134px;
@@ -17,7 +17,7 @@ margin: 40px 16px 0;
 }
 
 .cardGhost {
-    border: 1px dashed rgba(155, 173, 255, 0.4);
+    border: 1px dashed var(--bg-purple);
     background: transparent;
     color: var(--text-color-purple);
     margin: 0 124px 30px 0;
@@ -29,17 +29,17 @@ margin: 40px 16px 0;
         top: 115px;
         width: 32px;
         height: 20px;
-        border-top: 1px solid rgba(155, 173, 255, 0.6);
+        border-top: 1px solid var(--bg-purple);
         transform: rotate(45deg);
     }
 }
 
 .cardMain {
     margin: 30px 0 0 124px;
-    background: #6b5cff;
-    color: #ffffff;
+    background: var(--bg-purple);
+    color: var(--text-color-wite);
     z-index: 2;
-    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 12px 40px var(--bg-dark);
 
     &::before {
         content: '';
@@ -48,7 +48,7 @@ margin: 40px 16px 0;
         top: -20px;
         width: 32px;
         height: 20px;
-        border-top: 1px solid rgba(155, 173, 255, 0.6);
+        border-top: 1px solid var(--bg-purple);
         transform: rotate(45deg);
     }
 }
@@ -77,7 +77,7 @@ margin: 40px 16px 0;
 }
 
 .title-text {
-    font-weight: 700;
+    font-weight: 400;
     font-size: 35px;
     text-transform: uppercase;
     margin: 0;
@@ -125,3 +125,77 @@ margin: 40px 16px 0;
     font-size: 14px;
     margin-bottom: 37px;
 }
+
+@media screen and (min-width: 1000px) {
+    .title {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: center;
+        margin: 160px auto 135px;
+    }
+
+    .ttitle-top {
+        display: flex;
+        flex-direction: column;
+        max-width: 630px;
+    }
+
+    .input-blok {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media screen and (min-width: 1101px) {
+    .title {
+        gap: 50px;
+    }
+}
+
+@media (min-width: 1350px) {
+  .title-wrapper {
+    width: 470px;
+    height: 210px;
+  }
+
+  .card {
+    width: 276px;
+    height: 163px;
+    border-radius: 6.3px;
+  }
+
+  .cardGhost {
+    margin: 0 194px 47px 0;
+  }
+
+  .cardGhost::before {
+    left: 133px;
+    top: 180px;
+    width: 50px;
+    height: 31px;
+  }
+
+  .cardMain {
+    margin: 47px 0 0 194px;
+  }
+
+  .cardMain::before {
+    left: 71px;
+    top: -31px;
+    width: 50px;
+    height: 31px;
+  }
+
+  .pair {
+    font-size: 30px;
+  }
+
+  .type {
+    font-size: 18px;
+  }
+
+  .percent {
+    font-size: 30px;
+  }
+}
+

@@ -65,6 +65,9 @@ export function Tariffs() {
 
   return (
     <section id='tariffs' className="tariffs">
+      <div>
+
+      <div className='tarif-top'>
       <h2 className="tariffs__title">ТАРИФИ</h2>
 
       <div className="tariffs__switch">
@@ -96,6 +99,7 @@ export function Tariffs() {
             ФʼЮЧЕРС
           </button>
         </div>
+      </div>
       </div>
 
       <div className="tariffs__cards">
@@ -138,6 +142,8 @@ export function Tariffs() {
           </article>
         ))}
       </div>
+      </div>
+
     </section>
   );
 };

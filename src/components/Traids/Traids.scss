@@ -1,6 +1,6 @@
 .traids {
   background-color: var(--bg-dark); 
-  padding: 60px 40px;
+  padding: 60px 0 60px 40px;
 }
 
 .traids__title {
@@ -150,7 +150,7 @@
 
 @media (max-width: 768px) {
   .traids {
-    padding: 40px 16px;
+    padding: 40px 0 40px 16px;
   }
 
   .traids__track {

@@ -36,6 +36,7 @@ export function Faq() {
 
   return (
     <section id='faq' className="faq">
+      <div className='faq-blok'>
       <h2 className="faq__title">ЧАСТІ ЗАПИТАННЯ</h2>
 
       <div className="faq__list">
@@ -83,6 +84,7 @@ export function Faq() {
             </div>
           );
         })}
+      </div>
       </div>
     </section>
   );

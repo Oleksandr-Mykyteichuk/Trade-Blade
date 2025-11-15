@@ -1,6 +1,16 @@
 .tariffs {
   background-color: var(--bg-dark); 
   padding: 80px 40px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.tarif-top {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  width: 100%;
 }
 
 .tariffs__title {
@@ -169,7 +179,7 @@
   font-weight: 400;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 800px) {
   .tariffs {
     padding: 60px 16px;
   }
