@@ -44,9 +44,9 @@ export function Faq() {
       className={`faq fade-in ${inView ? "fade-in--visible" : ""}`}
     >
       <div className='faq-blok'>
-        <h2 className="faq__title">ЧАСТІ ЗАПИТАННЯ</h2>
+        <h2 className="faq-title">ЧАСТІ ЗАПИТАННЯ</h2>
 
-        <div className="faq__list">
+        <div className="faq-list">
           {faqItems.map((item, i) => {
             const isActive = item.id === activeId;
 
@@ -54,20 +54,20 @@ export function Faq() {
               <div
                 key={item.id}
                 className={
-                  `faq__item ${isActive ? 'faq__item--active' : ''} faq-anim`
+                  `faq-item ${isActive ? 'faq-item--active' : ''} faq-anim`
                   + (inView ? " faq-anim--visible" : "")
                 }
                 style={{ transitionDelay: `${i * 0.12}s` }}
               >
                 <button
                   type="button"
-                  className="faq__question"
+                  className="faq-question"
                   onClick={() => toggleItem(item.id)}
                 >
                   <span>{item.question}</span>
                   <span
                     className={
-                      'faq__icon ' + (isActive ? 'faq__icon--open' : '')
+                      'faq-icon ' + (isActive ? 'faq-icon--open' : '')
                     }
                   >
                     <svg
@@ -86,7 +86,7 @@ export function Faq() {
                 </button>
 
                 <p
-                  className="faq__answer faq-answer"
+                  className="faq-answer faq-answer"
                   style={{
                     maxHeight: isActive ? "200px" : "0px",
                     opacity: isActive ? 1 : 0,

@@ -10,26 +10,32 @@ import { Faq } from "./components/Faq/Faq";
 import { Footer } from "./components/Footer/Footer";
 import { HeaderPhone } from "./components/HeaderPhone/HeaderPhone";
 import { useState } from "react";
+import { Modal } from "./components/Modal/Modal";
 
 function App() {
   const [isBurgerMenuOpen, setIsBurgerMenuOpen] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   const toggleBurgerMenu = () => {
     setIsBurgerMenuOpen(!isBurgerMenuOpen);
   };
 
+  const openModal = () => setIsModalOpen(true);
+  const closeModal = () => setIsModalOpen(false);
+
   return (
     <>
-    <Header />
-    <HeaderPhone toggleBurgerMenu={toggleBurgerMenu} />
-    {isBurgerMenuOpen && <BurgerMenu onClose={toggleBurgerMenu} />}
-    <Title />
-    <Numbers />
-    <Traids />
-    <About />
-    <Tariffs />
-    <Faq />
-    <Footer />
+      <Header onOpenModal={openModal} />
+      <HeaderPhone toggleBurgerMenu={toggleBurgerMenu} />
+      {isBurgerMenuOpen && <BurgerMenu onOpenModal={openModal} onClose={toggleBurgerMenu} />}
+      <Title onOpenModal={openModal} />
+      <Numbers />
+      <Traids />
+      <About onOpenModal={openModal} />
+      <Tariffs onOpenModal={openModal} />
+      <Faq />
+      <Footer />
+      <Modal isOpen={isModalOpen} onClose={closeModal} />
     </>
   )
 }

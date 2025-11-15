@@ -1,6 +1,10 @@
 import { useState } from 'react';
 import { useInView } from '../../hooks/useInView';
 
+type TariffstProps = {
+  onOpenModal: () => void;
+};
+
 type Tariff = {
   name: string;
   features: string[];
@@ -59,7 +63,7 @@ const futuresTariffs: Tariff[] = [
   },
 ];
 
-export function Tariffs() {
+export function Tariffs({ onOpenModal }: TariffstProps) {
   const [mode, setMode] = useState<'spot' | 'futures'>('spot');
   const { ref, inView } = useInView(0.2);
 
@@ -146,7 +150,7 @@ export function Tariffs() {
                 </select>
               </div>
 
-              <button className="tariffs__cta">
+              <button onClick={onOpenModal} className="tariffs__cta">
                 СПРОБУВАТИ
                 <span className="tariffs__cta-sub">
                   5 днів безкоштовно

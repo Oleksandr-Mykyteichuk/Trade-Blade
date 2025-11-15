@@ -1,6 +1,10 @@
 import logo from '../../assets/logo.svg'
 
-export function Header() {
+type HeadertProps = {
+  onOpenModal: () => void;
+};
+
+export function Header({ onOpenModal }: HeadertProps) {
     return (
         <>
             <header className="header">
@@ -14,8 +18,8 @@ export function Header() {
                 </nav>
 
                 <div className="header-button">
-                    <button className="header-in">ВХІД</button>
-                    <button className="header-up">РЕЄСТРАЦІЯ</button>
+                    <button className="header-in" onClick={onOpenModal}>ВХІД</button>
+                    <button className="header-up" onClick={onOpenModal}>РЕЄСТРАЦІЯ</button>
                 </div>
             </header>
         </>

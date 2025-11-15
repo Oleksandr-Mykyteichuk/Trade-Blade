@@ -1,7 +1,11 @@
 import { Start } from "../Start/Start";
 import { useInView } from "../../hooks/useInView";
 
-export function About() {
+type AboutProps = {
+  onOpenModal: () => void;
+};
+
+export function About({ onOpenModal }:AboutProps) {
   const { ref, inView } = useInView(0.2);
 
   return (
@@ -24,7 +28,7 @@ export function About() {
       </div>
 
       <div className="about-start">
-        <Start />
+        <Start onOpenModal={onOpenModal} />
       </div>
     </section>
   );

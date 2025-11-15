@@ -2,9 +2,10 @@ import close from '../../assets/close.svg'
 
 interface BurgerMenuProps {
     onClose: () => void;
+    onOpenModal: () => void;
 }
 
-export function BurgerMenu({ onClose }: BurgerMenuProps) {
+export function BurgerMenu({ onClose, onOpenModal }: BurgerMenuProps) {
     const handleClick = (id: string) => (e: React.MouseEvent) => {
         e.preventDefault();
         document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
@@ -26,8 +27,8 @@ export function BurgerMenu({ onClose }: BurgerMenuProps) {
                     <a className="link-burger" href="#faq" onClick={handleClick('faq')}>FAQ</a>
                 </nav>
                 <div className="button-burger">
-                    <button className="in-burger">ВХІД</button>
-                    <button className="up-burger">РЕЄСТРАЦІЯ</button>
+                    <button className="in-burger" onClick={onOpenModal}>ВХІД</button>
+                    <button className="up-burger" onClick={onOpenModal}>РЕЄСТРАЦІЯ</button>
                 </div>
             </div>
         </>

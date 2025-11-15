@@ -1,6 +1,10 @@
 import { useInView } from "../../hooks/useInView";
 
-export function Title() {
+type TitletProps = {
+  onOpenModal: () => void;
+};
+
+export function Title({ onOpenModal }: TitletProps) {
   const { ref, inView } = useInView(0.2);
 
   return (
@@ -36,7 +40,7 @@ export function Title() {
 
         <div className="input-blok">
           <input className="input-email" type="email" placeholder="ВАШ E-MAIL" />
-          <button className="button-start">почати</button>
+          <button onClick={onOpenModal} className="button-start">почати</button>
           <p className="bottom-text">5 днів безкоштовно</p>
         </div>
       </div>
