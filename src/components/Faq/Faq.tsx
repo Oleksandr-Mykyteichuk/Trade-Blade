@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { useInView } from '../../hooks/useInView';
 
 type FaqItem = {
   id: number;
@@ -30,62 +31,74 @@ const faqItems: FaqItem[] = [
 export function Faq() {
   const [activeId, setActiveId] = useState<number | null>(1);
 
+  const { ref, inView } = useInView(0.2);
+
   const toggleItem = (id: number) => {
     setActiveId(prev => (prev === id ? null : id));
   };
 
   return (
-    <section id='faq' className="faq">
+    <section
+      id='faq'
+      ref={ref as any}
+      className={`faq fade-in ${inView ? "fade-in--visible" : ""}`}
+    >
       <div className='faq-blok'>
-      <h2 className="faq__title">ЧАСТІ ЗАПИТАННЯ</h2>
+        <h2 className="faq__title">ЧАСТІ ЗАПИТАННЯ</h2>
 
-      <div className="faq__list">
-        {faqItems.map(item => {
-          const isActive = item.id === activeId;
+        <div className="faq__list">
+          {faqItems.map((item, i) => {
+            const isActive = item.id === activeId;
 
-          return (
-            <div
-              key={item.id}
-              className={
-                'faq__item ' + (isActive ? 'faq__item--active' : '')
-              }
-            >
-              <button
-                type="button"
-                className="faq__question"
-                onClick={() => toggleItem(item.id)}
+            return (
+              <div
+                key={item.id}
+                className={
+                  `faq__item ${isActive ? 'faq__item--active' : ''} faq-anim`
+                  + (inView ? " faq-anim--visible" : "")
+                }
+                style={{ transitionDelay: `${i * 0.12}s` }}
               >
-                <span>{item.question}</span>
-                <span
-                  className={
-                    'faq__icon ' + (isActive ? 'faq__icon--open' : '')
-                  }
+                <button
+                  type="button"
+                  className="faq__question"
+                  onClick={() => toggleItem(item.id)}
                 >
-                  <svg
-                    width="20"
-                    height="20"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="#8A8F99"       
-                    strokeWidth="2.5"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
+                  <span>{item.question}</span>
+                  <span
+                    className={
+                      'faq__icon ' + (isActive ? 'faq__icon--open' : '')
+                    }
                   >
-                    <path d="M6 9l6 6 6-6" />
-                  </svg>
-                </span>
-              </button>
+                    <svg
+                      width="20"
+                      height="20"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="#8A8F99"
+                      strokeWidth="2.5"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    >
+                      <path d="M6 9l6 6 6-6" />
+                    </svg>
+                  </span>
+                </button>
 
-              {isActive && (
-                <p className="faq__answer">
+                <p
+                  className="faq__answer faq-answer"
+                  style={{
+                    maxHeight: isActive ? "200px" : "0px",
+                    opacity: isActive ? 1 : 0,
+                  }}
+                >
                   {item.answer}
                 </p>
-              )}
-            </div>
-          );
-        })}
-      </div>
+              </div>
+            );
+          })}
+        </div>
       </div>
     </section>
   );
-};
+}

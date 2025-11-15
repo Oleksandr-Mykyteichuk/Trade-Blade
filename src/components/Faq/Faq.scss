@@ -51,6 +51,14 @@
   font: inherit;
   text-align: left;
   cursor: pointer;
+
+  &:hover {
+    box-shadow: none;
+  }
+
+  &:active {
+    background-color: var(--bg-purple);
+  }
 }
 
 .faq__icon {
@@ -74,3 +82,31 @@
     max-width: 846px;
   }
 }
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity .6s ease, transform .6s ease;
+}
+
+.fade-in--visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.faq-anim {
+  opacity: 0;
+  transform: translateY(25px);
+  transition: opacity .6s ease, transform .6s ease;
+}
+
+.faq-anim--visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.faq-answer {
+  overflow: hidden;
+  transition: max-height .55s ease, opacity .55s ease;
+}
+

@@ -1,4 +1,5 @@
 import React, { useEffect, useRef } from 'react';
+import { useInView } from '../../hooks/useInView';
 
 type Deal = {
   pair: string;
@@ -95,11 +96,12 @@ const deals: Deal[] = [
   },
 ];
 
-
 export const Traids: React.FC = () => {
   const sliderRef = useRef<HTMLDivElement | null>(null);
   const trackRef = useRef<HTMLDivElement | null>(null);
   const thumbRef = useRef<HTMLDivElement | null>(null);
+
+  const { ref: sectionRef, inView } = useInView(0.2);
 
   useEffect(() => {
     const slider = sliderRef.current;
@@ -139,7 +141,11 @@ export const Traids: React.FC = () => {
   }, []);
 
   return (
-    <section id='online-deals' className="traids">
+    <section
+      id="online-deals"
+      ref={sectionRef as React.RefObject<HTMLElement>}
+      className={`traids fade-in ${inView ? 'fade-in--visible' : ''}`}
+    >
       <h2 className="traids__title">Минулі угоди</h2>
 
       <p className="traids__status">
@@ -149,7 +155,14 @@ export const Traids: React.FC = () => {
       <div className="traids__wrapper">
         <div className="traids__slider" ref={sliderRef}>
           {deals.map((deal, index) => (
-            <article className="traids__card" key={index}>
+            <article
+              className={
+                'traids__card traids-anim ' +
+                (inView ? 'traids-anim--visible' : '')
+              }
+              key={index}
+              style={{ transitionDelay: inView ? `${index * 0.06}s` : '0s' }}
+            >
               <div className="traids__top">
                 <span className="traids__pair">{deal.pair}</span>
                 <span className="traids__type">{deal.type}</span>

@@ -34,12 +34,15 @@ html {
   scroll-behavior: smooth;
 
   padding: 0 16px;
+
   @media (min-width: 800px) {
     padding: 0 25px;
   }
+
   @media (min-width: 1101px) {
     padding: 0 40px;
   }
+
   @media (min-width: 1200px) {
     padding: 0 80px;
   }
@@ -53,15 +56,18 @@ section {
     margin: 0 -25px;
     padding: 0 25px;
   }
+
   @media (min-width: 1101px) {
     margin: 0 -40px;
     padding: 0 40px;
   }
+
   @media (min-width: 1200px) {
     margin: 0 -80px;
     padding: 0 80px;
   }
 }
+
 header {
   margin: 0 -16px;
   padding: 0 16px;
@@ -70,15 +76,18 @@ header {
     margin: 0 -25px;
     padding: 0 25px;
   }
+
   @media (min-width: 1101px) {
     margin: 0 -40px;
     padding: 0 40px;
   }
+
   @media (min-width: 1200px) {
     margin: 0 -80px;
     padding: 0 80px;
   }
 }
+
 footer {
   margin: 0 -16px;
   padding: 0 16px;
@@ -87,12 +96,24 @@ footer {
     margin: 0 -25px;
     padding: 0 25px;
   }
+
   @media (min-width: 1101px) {
     margin: 0 -40px;
     padding: 0 40px;
   }
+
   @media (min-width: 1200px) {
     margin: 0 -80px;
     padding: 0 80px;
+  }
+}
+
+button {
+  &:hover {
+    box-shadow: 0px 0px 10px 0px var(--bg-q);
+  }
+
+  &:active {
+    background-color: var(--bg-grey);
   }
 }
