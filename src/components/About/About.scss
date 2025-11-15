@@ -3,6 +3,7 @@
     padding: 24px 16px 68px;
     position: relative;
     height: 300px;
+    margin-bottom: 200px;
 
     &::after {
         content: "";
@@ -26,6 +27,7 @@
 
     @media screen and (min-width: 1250px) {
         padding: 56px 80px 92px;
+        margin-bottom: 0;
     }
 }
 
